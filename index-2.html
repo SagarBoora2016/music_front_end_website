@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-2.css">
+        <!-- css for music player -->
+        <link rel="stylesheet" href="music-player.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/9ff48b1996.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- header part -->
+        <section id="header-nav-bar">
+
+            <div class="header-nav-bar-start">
+                <div class="header-nav-bar-start-icon">
+                    <i class="fas fa-play-circle"></i>
+                    <div class="header-nav-bar-start-icon-head">
+                        <div>
+                            Sagar's
+                        </div>
+                        <div class="bold-text">
+                            Studio
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-nav-bar-start-favourite">
+                    Favourite
+                </div>
+            </div>
+
+            <div class="header-nav-bar-end">
+                <div class="header-nav-bar-end-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <div class="header-nav-bar-end-noti">
+                    <i class="fas fa-bell"></i>
+                    <div class="red-circle">
+                        
+                    </div>
+                </div>
+                <div class="header-nav-bar-end-img">
+                    <img src="music-profile.jpg">
+                </div>
+            </div>
+        </section>
+        <!-- songs section -->
+        <section id="songs">
+            <!-- first part -->
+            <div class="songs-details">
+                <div class="codplay">
+                    <div class="codplay-images">
+                        <img src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="codplay-about">
+                        <div class="codplay-about-title">
+                            <div class="codplay-about-title-name">
+                                Eminem
+                            </div>
+                            <div class="codplay-about-title-follow">
+                                1 Million
+                            </div>
+                        </div>
+                        <div class="codplay-about-band">
+                            Rapper
+                        </div>
+                        <div class="codplay-about-data">
+                            Marshall Bruce Mathers III, known professionally as Eminem, is an American rapper, songwriter, and record producer. He is one of the most successful artists of the 21st century. In addition to his solo career, Eminem was a member of the hip hop group D12     
+                        </div>
+                        <div class="codplay-about-btn">
+                            <div class="codplay-about-btn-button">
+                                <button>Play All</button>
+                                <div class="track">
+                                    247 Tracks | 128 Albums
+                                </div>
+                            </div>
+                            <div class="codplay-about-btn-data">
+                                Follow
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="songs-list">
+                    <div class="songs-first-part">
+                        <div class="songs-list-num">
+                            01
+                        </div>
+                        <div class="songs-list-img">
+                            <img src="data:image/jpeg;base64,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">
+                        </div>
+                        <div class="songs-list-about">
+                            <div class="songs-list-about-song">
+                                Eminem
+                            </div>
+                            <div class="songs-list-about-album">
+                                Superman
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-part">
+                        <div class="songs-heart">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="songs-add">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="songs-list selected">
+                    <div class="songs-first-part">
+                        <div class="songs-list-num">
+                            02
+                        </div>
+                        <div class="songs-list-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTvaJjSkAoBzvbqcrUgvX2XzPhGaR1nzb7DYICWc0XO1evzWVdD&usqp=CAU">
+                        </div>
+                        <div class="songs-list-about">
+                            <div class="songs-list-about-song">
+                                Eminem
+                            </div>
+                            <div class="songs-list-about-album">
+                                Space Bound
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-part">
+                        <div class="songs-heart">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="songs-add">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="songs-list">
+                    <div class="songs-first-part">
+                        <div class="songs-list-num">
+                            03
+                        </div>
+                        <div class="songs-list-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSg_UtinclF2liEkT_MeqtyeOXefcit-w9SfP3toycNOGAb5y6x&usqp=CAU">
+                        </div>
+                        <div class="songs-list-about">
+                            <div class="songs-list-about-song">
+                                Eminem
+                            </div>
+                            <div class="songs-list-about-album">
+                                Mockingbird
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-part">
+                        <div class="songs-heart">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="songs-add">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="songs-list">
+                    <div class="songs-first-part">
+                        <div class="songs-list-num">
+                            04
+                        </div>
+                        <div class="songs-list-img">
+                            <img src="data:image/jpeg;base64,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">
+                        </div>
+                        <div class="songs-list-about">
+                            <div class="songs-list-about-song">
+                                Eminem
+                            </div>
+                            <div class="songs-list-about-album">
+                                Not Afraid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-part">
+                        <div class="songs-heart">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="songs-add">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="songs-list bottom">
+                    <div class="songs-first-part">
+                        <div class="songs-list-num">
+                            05
+                        </div>
+                        <div class="songs-list-img">
+                            <img src="data:image/jpeg;base64,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">
+                        </div>
+                        <div class="songs-list-about">
+                            <div class="songs-list-about-song">
+                                Eminem
+                            </div>
+                            <div class="songs-list-about-album">
+                                Stan
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-part">
+                        <div class="songs-heart">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="songs-add">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- songs-tracks, second part -->
+            <div class="songs-tracks bottom">
+
+                <div class="songs-tracks-queue">
+                    <div class="songs-tracks-queue-1">
+                        Similar Artist
+                    </div>
+                    <div class="songs-tracks-queue-2">
+                        <div>
+                            View All
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="songs-details-latest-release-list">
+                            
+                    <div class="horizantal-zoom songs-details-latest-release-list-img-container">
+                        <a href="#link2"><i class="fas fa-play-circle"></i></a>
+                        <img src="https://www.thewrap.com/wp-content/uploads/2020/02/eminem-oscars-1.jpg">
+                        
+                    </div>
+                    <div class="songs-tacks-list-details">
+                        <div class="songs-tacks-list-details-song">
+                            Eminem
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Oct 14 2002
+                        </div>
+                    </div>
+                    <div class="songs-details-latest-release-list-details">
+                        <div class="songs-details-latest-release-list-details-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <div class="songs-details-list">
+                                <div class=".songs-details-list-details">
+                                    <i class="fas fa-play"></i>
+                                    Play
+                                </div>
+                                <div>
+                                    <i class="fas fa-plus"></i>
+                                    Add To Queue
+                                </div>
+                                <div>
+                                    <i class="fas fa-list-ul"></i>
+                                    Add To Favourites
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle"></i>
+                                    Get Info
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="songs-details-latest-release-list-details-time">
+                            4:04
+                        </div>
+                    </div>
+
+                </div>
+                <div class="songs-details-latest-release-list">
+                    <div class="horizantal-zoom songs-details-latest-release-list-img-container">
+                        <a href="#link2"><i class="fas fa-play-circle"></i></a>
+                        <img src="https://www.thewrap.com/wp-content/uploads/2020/02/eminem-oscars-1.jpg">
+                    </div>
+                    <div class="songs-tacks-list-details">
+                        <div class="songs-tacks-list-details-song">
+                            Eminem
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Oct 14 2002
+                        </div>
+                    </div>
+                    <div class="songs-details-latest-release-list-details">
+                        <div class="songs-details-latest-release-list-details-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <div class="songs-details-list">
+                                <div class=".songs-details-list-details">
+                                    <i class="fas fa-play"></i>
+                                    Play
+                                </div>
+                                <div>
+                                    <i class="fas fa-plus"></i>
+                                    Add To Queue
+                                </div>
+                                <div>
+                                    <i class="fas fa-list-ul"></i>
+                                    Add To Favourites
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle"></i>
+                                    Get Info
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="songs-details-latest-release-list-details-time">
+                            4:04
+                        </div>
+                    </div>
+
+                </div>
+                <div class="songs-details-latest-release-list">
+                    <div class="vertical-zoom songs-details-latest-release-list-img-container">
+                        <a href="#link2"><i class="fas fa-play-circle"></i></a>
+                        <img src="https://www.thewrap.com/wp-content/uploads/2020/02/eminem-oscars-1.jpg">
+                    </div>
+                    <div class="songs-tacks-list-details">
+                        <div class="songs-tacks-list-details-song">
+                            Eminem
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Oct 14 2002
+                        </div>
+                    </div>
+                    <div class="songs-details-latest-release-list-details">
+                        <div class="songs-details-latest-release-list-details-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <div class="songs-details-list">
+                                <div class=".songs-details-list-details">
+                                    <i class="fas fa-play"></i>
+                                    Play
+                                </div>
+                                <div>
+                                    <i class="fas fa-plus"></i>
+                                    Add To Queue
+                                </div>
+                                <div>
+                                    <i class="fas fa-list-ul"></i>
+                                    Add To Favourites
+                                </div>
+                                <div>
+                                    <i class="fas fa-info-circle"></i>
+                                    Get Info
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="songs-details-latest-release-list-details-time">
+                            4:04
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="songs-tracks-queue">
+                    <div class="songs-tracks-queue-1">
+                        Recently Played
+                    </div>
+                    <div class="songs-tracks-queue-2">
+                        <div>
+                            View All
+                        </div>
+                    </div>
+                </div>
+                <div class="songs-tacks-list">
+                    <div class="songs-tacks-list-num">
+                        01
+                    </div>
+                    <div class="songs-tacks-list-img">
+                        <img src="https://a10.gaanacdn.com/images/song/70/24126370/crop_175x175_1534758492.jpg">
+                    </div>
+                    <div class="margin-10 songs-tacks-list-details give-width">
+                        <div class="songs-tacks-list-details-song">
+                            Dekhte Dekhte
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Atif Aslam
+                        </div>
+                    </div>
+                    <div class="songs-tacks-list-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="songs-tacks-list">
+                    <div class="songs-tacks-list-num">
+                        02
+                    </div>
+                    <div class="songs-tacks-list-img">
+                        <img src="https://a10.gaanacdn.com/images/song/81/23945281/crop_175x175_1531315311.jpg">
+                    </div>
+                    <div class="margin-10 songs-tacks-list-details give-width">
+                        <div class="songs-tacks-list-details-song">
+                            Tera Fitoor
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Arijit Singh
+                        </div>
+                    </div>
+                    <div class="songs-tacks-list-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="songs-tacks-list">
+                    <div class="songs-tacks-list-num">
+                        03
+                    </div>
+                    <div class="songs-tacks-list-img">
+                        <img src="https://a10.gaanacdn.com/images/song/31/24723531/crop_175x175_1544675229.jpg">
+                    </div>
+                    <div class="margin-10 songs-tacks-list-details give-width">
+                        <div class="songs-tacks-list-details-song">
+                            Gali Gali
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Neha Kakkar
+                        </div>
+                    </div>
+                    <div class="songs-tacks-list-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="songs-tacks-list">
+                    <div class="songs-tacks-list-num">
+                        04
+                    </div>
+                    <div class="songs-tacks-list-img">
+                        <img src="https://a10.gaanacdn.com/images/song/95/25487395/crop_175x175_1549901713.jpg">
+                    </div>
+                    <div class="margin-10 songs-tacks-list-details give-width">
+                        <div class="songs-tacks-list-details-song">
+                            Photo
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Karan Sehmbi
+                        </div>
+                    </div>
+                    <div class="songs-tacks-list-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="bottom songs-tacks-list last">
+                    <div class="songs-tacks-list-num">
+                        05
+                    </div>
+                    <div class="songs-tacks-list-img">
+                        <img src="https://a10.gaanacdn.com/images/song/6/24225706/crop_175x175_1536745597.jpg">
+                    </div>
+                    <div class="margin-10 songs-tacks-list-details give-width">
+                        <div class="songs-tacks-list-details-song">
+                            Pal
+                        </div>
+                        <div class="songs-tacks-list-details-album">
+                            Arijit Singh
+                        </div>
+                    </div>
+                    <div class="songs-tacks-list-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- music player -->
+        <div class="container" id="link2">
+            <div class="music-img">
+                <img src="https://www.thewrap.com/wp-content/uploads/2020/02/eminem-oscars-1.jpg">
+            </div>
+            <div class="music-details">
+                <div class="music-details-album">
+                    <span>Imagine By This</span>
+                    <i class="fas fa-heart first-child"></i>
+                    <i class="fas fa-ban"></i>
+                </div>
+                <div class="music-details-artist">
+                    John Lennon
+                </div>
+            </div>
+            <div class="music-player">
+                <div class="music-player-buttons">
+                    <div class="music-player-buttons-shuffle">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="music-player-buttons-prev">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="music-player-buttons-play">
+                        <i class="far fa-pause-circle"></i>
+                    </div>
+                    <div class="music-player-buttons-next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                    <div class="music-player-buttons-loop">
+                        <i class="fas fa-random"></i>
+                    </div>
+                </div> 
+                <div class="music-player-progress">
+                    <div class="music-player-progress-1">
+                        1:39
+                    </div>
+                    <div class="music-player-progress-2">
+                        <div class="thirty-three-percent">
+
+                        </div>
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="music-player-progress-3">
+                        4:44
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <div class="music-player-sound">
+                <div class="padding">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="padding">
+                    <i class="fas fa-assistive-listening-systems"></i>
+                </div>
+                <div class="padding">
+                    <i class="fas fa-volume-up"></i>
+                    
+                </div>
+                <div class="music-player-sound-progress padding">
+                    <div class="fifty-percent">
+
+                    </div>
+                    <div class="sec-circle">
+
+                    </div>
+                </div>
+                <div class="padding">
+                    <i class="fas fa-expand-alt"></i>
+                </div>
+               
+            </div>
+        </div>
+
+    </body>
+</html>

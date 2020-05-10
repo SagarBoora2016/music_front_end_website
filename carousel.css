@@ -1,0 +1,53 @@
+/* the scene part set here for carousel */
+.scene {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+    margin: auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+/* carousel part here   */
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation:example 3s ease-in infinite;
+}
+/* each cell of carousel here   */
+.carousel__cell {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 10px;
+    top: 10px;
+}
+/* carousel image here */
+.carousel__cell img {
+    width: 100%;
+    height: 100%;
+   background-size: contain;
+   background-position: center;
+}
+/* setting the rotateY and translateZ here by calculatuing */
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(61px); }
+.carousel__cell:nth-child(2) { transform: rotateY( 120deg) translateZ(61px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 240deg) translateZ(61px); }
+
+/* set the animation here */
+@keyframes example {
+  0%{
+      transform: translateZ(-61px) rotateY(0deg);
+  }
+  33%{
+      transform: translateZ(-61px) rotateY(120deg);
+  }
+  66%{
+      transform: translateZ(-61px) rotateY(240deg);
+  }
+  100%{
+      transform: translateZ(-61px) rotateY(360deg);
+  }
+}

@@ -1,0 +1,349 @@
+/* set height and width in start of both parts */
+html{
+   transition: all 1s;
+}
+.songs-details{
+    width: 60%;
+}
+.songs-tracks{
+    widows: 40%;
+}
+
+/* make width 90% for songs list */
+.songs-details-latest-release-list{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* set image height and width of main image */
+.songs-details-latest-release-list-img-container{
+    align-self: flex-end;
+    height: 8rem;
+    width: 8rem;
+}
+
+.songs-details-latest-release-list-details{
+    align-self: flex-start;
+    margin-left: 0px;
+}
+/* set image height and width of tracks */
+.songs-tacks-list-img{
+    height: 4rem;
+    width: 4rem;
+}
+.songs-tracks-queue-1{
+    font-size: 1.2rem;
+    width: 90%;
+}
+.songs-tracks-queue-2{
+    font-size: 1rem;
+}
+.set-imt{
+    height: 5rem;
+    width: 5rem;
+}
+.set-size{
+    font-size: 0.8rem;
+}
+/* make link2 display as none */
+#link2{
+    display: none;
+}
+/* after click make it visible (music-player) */
+#link2:target{
+    display: flex;
+}
+/* the main part of page */
+.codplay{
+    padding:16px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+/* set the main image of page here */
+.codplay-images{
+    min-height: 40vh;
+    height: auto;
+    width:50%;
+    overflow: hidden;
+}
+/* make image in container */
+.codplay-images img{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+}
+/* about part of singer here */
+.codplay-about{
+    height: auto;
+    background-color: rgb(20,27,65);
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    padding-top: 20px;
+    justify-content: flex-start;
+}
+/* about title of page */
+.codplay-about-title{
+    display: flex;
+    width: 100%;
+}
+/* name of about */
+.codplay-about-title-name{
+    align-self: flex-start;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 50%;
+    padding:16px;
+}
+/* about the follow part here of main image */
+.codplay-about-title-follow{
+    display: flex;
+    justify-content: flex-end;
+    font-size:0.8rem;
+    width: 50%;
+    padding:16px;
+}
+.codplay-about-band{
+    padding:8px 16px 8px;
+}
+/* the data of the main image */
+.codplay-about-data{
+    padding:8px 16px 8px;
+    word-wrap: break-word;
+}
+.track{
+    padding:0px 4px 0px 4px;
+}
+/* about button of main image */
+.codplay-about-btn{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    padding:8px 16px 8px;
+    align-items: baseline;
+    padding-bottom: 50px;
+}
+/* set the dimensions of button here */
+.codplay-about-btn-button button{
+    padding: 8px 16px 8px 16px;
+    font-size: 0.8rem;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right,#4629B5,#B344DA);
+    border:none;
+}
+/* set margin here so that button is more left */
+.codplay-about-btn-button div{
+    padding-top: 8px;
+    text-align: left;
+    margin-left: -10%;
+}
+/* set the font-size of about section */
+.codplay-about-btn-data{
+    font-size: 1rem;
+}
+/* the song list of image here */
+.songs-list{
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(20,27,65);
+    padding:16px;
+    margin:8px;
+}
+/* first part of the list */
+.songs-first-part{
+    display: flex;
+    width: 40%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* song lidt number */
+.songs-list-num{
+    display: flex;
+    padding:0px 8px 0px 8px;
+}
+/* song lsit image dimensions */
+.songs-list-img{
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    padding:0px 8px 0px 8px;
+}
+.songs-list-img img{
+    border-radius: 0%;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.5s ease-in-out;
+}
+/* set image after hover */
+.songs-list-img:hover img{
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 4px lightblue;
+}
+/* aboout the list of songs */
+.songs-list-about{
+    display: flex;
+    flex-direction: column;
+    padding:0px 8px 0px 8px;
+}
+/* second part of the page */
+.second-part{
+    width: 30%;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+/* add heart */
+.songs-heart{
+    padding: 8px 16px 8px 16px;
+}
+/* add button  */
+.songs-add{
+    padding: 8px 16px 8px 16px;
+}
+/* make the seclected part background color */
+.selected{
+    background-color: rgb(20,27,80);
+}
+/* set bottom margin here */
+.bottom{
+    margin-bottom: 80px;
+}
+/* set the player width for less than 1000px */
+@media only screen and (max-width: 1000px) {
+    
+    .songs-first-part{
+        width: 64%;
+    }  
+    .second-part{
+        width: 35%;
+    }   
+    .songs-list{
+        margin:10px;
+        padding:8px;
+    }
+    .songs-tacks-list-img img{
+        height: 5rem;
+        width: 5rem;
+    }
+    .songs-tacks-list{
+        margin:16px;
+    }
+    /* setting the font-size here */
+    .songs-tacks-list-details-song{
+        font-size: 1.1rem;
+    }
+    .songs-tacks-list-details-album{
+        font-size: 0.9rem;
+    }
+    .codplay-about-data{
+        font-size: 1rem;
+    }
+    .codplay-about-band{
+        font-size: 1rem;
+    }
+    .codplay-about-title-follow{
+        font-size: 1rem;
+    }
+    .codplay-about-title-name{
+        font-size: 1rem;
+    }
+    .songs-list-about-album{
+        font-size: 1rem;
+    }
+    .songs-list-about-song{
+        font-size: 1rem;
+    }
+    .songs-list-num{
+        font-size: 1rem;
+    }
+    .track{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .songs-details{
+        width: 100%;
+    }
+
+    .songs-tracks{
+        widows: 100%;
+    }
+}
+/* set details for less than 700px */
+
+@media only screen and (max-width: 700px) {
+    .songs-list-img {
+        height: 7rem;
+        width: 7rem;
+    }
+    .songs-first-part{
+        width: 70%;
+    }  
+    .second-part{
+        width: 29%;
+    }
+    /* make width of songs-lsit as 88% */
+    .songs-list{
+         width:88%;
+         overflow: hidden;
+    }
+     .codplay-images{
+        height: auto;
+    }
+    .songs-tacks-list-img img{
+        height:6rem;
+        width: 6rem;
+    }
+    .songs-tacks-list{
+        margin:16px;
+    }
+    .songs-tacks-list-details-song{
+        font-size: 1.2rem;
+    }
+    .songs-tacks-list-details-album{
+        font-size: 1rem;
+    }
+    /* use bottom so that the player and tracks are visible */
+    .bottom{
+        margin-bottom: 100px;
+    }
+    /* setting the font-size here */
+    .codplay-about-data{
+        font-size: 1.3rem;
+    }
+    .codplay-about-band{
+        font-size: 1.3rem;
+    }
+    .codplay-about-title-follow{
+        font-size: 1.3rem;
+    }
+    .codplay-about-title-name{
+        font-size: 1.3rem;
+    }
+    .songs-list-about-album{
+        font-size: 1.3rem;
+    }
+    .songs-list-about-song{
+        font-size: 1.3rem;
+    }
+    .songs-list-num{
+        font-size: 1.3rem;
+    }
+    .track{
+        font-size: 1rem;
+    }
+}
+
