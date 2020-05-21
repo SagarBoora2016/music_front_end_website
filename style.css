@@ -236,7 +236,6 @@ body{
 .songs-details-latest-release-list-img-container{
      height:10rem;
      width: 9rem;
-     overflow: hidden;
      position: relative;
 }
  /* give dimensions to font-wawesome icon */
@@ -563,23 +562,25 @@ body{
 }
 .brightness:hover img{
     filter: brightness(100%);
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 .horizantal-zoom img{
-    transition: transform .5s ease-in-out;
+    transition: transform .7s ease-in-out;
     transform: scale(1);
     transform-origin: 100% 50%;
 }
 .horizantal-zoom:hover img{
-    transform: scale(1.7) translateX(30%);
+    transform: translateX(20%);
+	transform: scale(1.2);
 }
 .vertical-zoom img{
-    transition: transform .5s ease-in-out;
+    transition: transform .7s ease-in-out;
     transform: scale(1);
     transform-origin: 50% 100%;
 }
 .vertical-zoom:hover img{
-    transform: scale(1.7) translateY(30%);
+    transform: scale(1.2) translateY(30%);
+	transform: scale(1.2);
 }
 .colorise img{
     transition: transform .5s, filter 0.5s ease-in-out;
