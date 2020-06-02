@@ -427,7 +427,9 @@ body{
      padding:16px;
  }
 .songs-details-popular-artist-images{
+    width: 100%;
     padding:8px;
+    flex-direction: row;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -435,8 +437,8 @@ body{
 .songs-details-popular-artist-images-container a{
     height: 10rem;
     width: 9rem;
-    padding:8px;
-    margin:8px;
+    padding:4px;
+    margin:4px;
     display: flex;
     flex-direction: column;
 }
@@ -446,8 +448,14 @@ body{
     overflow: hidden;
     background-size: contain;
     background-position: center;
-    transition: all 0.5s;
+    transition: all 1s;
     overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.songs-new-title-details-pics-trackname{
+    color: white;
 }
 /* after hover make image circular */
 .songs-details-popular-artist-images-container a img:hover{
@@ -756,10 +764,12 @@ body{
     }
 }
 @media only screen and (max-width: 1300px) {
+    
     .songs-details-popular-artist-images-container a{
-        height: 30vh;
-        width: 30%;
+        height:30vh;
+        width: 30vh;
     }
+    
     .songs-tacks-list-img{
         height: 5rem;
         width:5rem;
@@ -775,12 +785,13 @@ body{
 /* for less than 1100px */
 @media only screen and (max-width: 1100px) {
     
+    
     .songs-tacks-list-details{
         margin-left: -5%;
     }
     .songs-details-popular-artist-images-container a{
         height: 30vh;
-        width: 30%;
+        width: 30vh;
     }
     .songs-details-latest-release-list-img-container:hover i{
         font-size:2.5rem;
@@ -953,7 +964,7 @@ body{
     box-shadow: 0px 0px 28px 8px rgb(1,40,47);
 }
 .drake img{
-    box-shadow: 0px 0px 28px 8px rgb(3,3,3);
+    box-shadow: 0px 0px 18px 4px rgb(132,141,181)
 }
 .sheeran img{
     box-shadow: 0px 0px 10px 4px #608694;
